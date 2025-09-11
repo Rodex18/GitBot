@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a basic Discord bot built with Node.js and the discord.js library. The bot implements a simple slash command system and currently features a single "ping" command that responds with "Pong!". The project serves as a foundation for building more complex Discord bot functionality with proper command registration and event handling.
+This is a Discord bot built with Node.js and the discord.js library, designed to stay always-active with enhanced stability features. The bot implements a slash command system and includes an HTTP monitoring server for uptime tracking. Currently features a "ping" command that responds with "🏓 Pong! Bot funcionando correctamente." The project includes advanced error handling, automatic reconnection, and is configured for VM deployment to ensure 24/7 availability.
 
 ## User Preferences
 
@@ -12,8 +12,11 @@ Preferred communication style: Simple, everyday language.
 
 ### Bot Architecture
 - **Event-driven design**: Uses Discord.js client events (ClientReady, InteractionCreate) to handle bot lifecycle and user interactions
-- **Slash command system**: Implements Discord's modern slash command interface rather than traditional text-based commands
+- **Slash command system**: Implements Discord's modern slash command interface rather than traditional text-based commands  
 - **Modular command structure**: Commands are defined as SlashCommandBuilder objects and registered with Discord's API
+- **Always-on HTTP server**: Runs monitoring web server on port 5000 for health checks and uptime tracking
+- **Advanced error handling**: Automatic reconnection, shard event monitoring, and startup retry logic
+- **VM deployment ready**: Configured for Reserved VM deployment to ensure 24/7 availability
 
 ### Application Structure
 - **Single-file architecture**: All bot logic is contained in `index.js` for simplicity
