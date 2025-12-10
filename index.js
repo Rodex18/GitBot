@@ -58,6 +58,8 @@ client.on('shardError', (error) => {
   console.error('🔄 Error de conexión:', error);
 });
 
+console.log("TOKEN EN RENDER:", process.env.TOKEN ? "CARGADO" : "NO CARGADO");
+
 // Iniciar sesión del bot con manejo de errores
 async function startBot() {
   try {
