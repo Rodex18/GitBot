@@ -61,11 +61,12 @@ client.on('shardError', (error) => {
 // Iniciar sesión del bot con manejo de errores
 async function startBot() {
   try {
+    console.log("Intentando iniciar sesión con el token...");
     await client.login(process.env.TOKEN);
+    console.log("LOGIN OK ✔️");
   } catch (error) {
-    console.error('❌ Error al iniciar el bot:', error);
-    // Reintentar en 5 segundos
-    setTimeout(startBot, 5000);
+    console.error("❌ Error al iniciar el bot:");
+    console.error(error);
   }
 }
 
