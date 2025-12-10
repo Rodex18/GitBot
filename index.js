@@ -2,7 +2,14 @@ const { Client, GatewayIntentBits, Events, REST, Routes, SlashCommandBuilder } =
 const http = require('http');
 require('dotenv').config();
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers
+  ]
+});
 
 // Servidor HTTP simple para mantener el bot activo
 const server = http.createServer((req, res) => {
